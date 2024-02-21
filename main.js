@@ -7,7 +7,7 @@ class ProductManager {
     addProduct(title, description, price, thumbnail, code, stock) {
         const CodigoRep = this.Products.some(product => product.code == code);
         if (CodigoRep) {
-            throw new Error("Error el codigo ya esta repetido.");
+            throw new Error("Error el codigo se encuentra repetido.");
         }
         this.Products.push({id:this.productIdCounter++ , title, description, price, thumbnail, code,stock});
         
